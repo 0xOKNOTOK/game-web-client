@@ -1,11 +1,8 @@
 import React from 'react'
+import { Container } from './components/Container'
 
 const App: React.FC = () => {
-  return (
-    <div>
-      <h1>Hi</h1>
-    </div>
-  )
+  return <Container></Container>
 }
 
 export default App

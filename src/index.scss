@@ -3,17 +3,16 @@
 
 // Colour variables.
 $backgroundColour: #000000;
-$accentColour: #C6CA53;
+$accentColour: #240090;
+$accentDarkColour: #190061;
+$shadowColour: #0C0032;
+$highlightColour: #3500d3;
 $textPrimary: #ffffff;
 
 // Mixins
 @mixin themePrimary {
   background-color: $backgroundColour;
   color: $textPrimary;
-}
-
-@mixin fontPrimary {
-  font-family: 'Red Hat Mono', monospace;
 }
 
 
@@ -42,7 +41,7 @@ $textPrimary: #ffffff;
 
 // Global Stylings
 body {
-  @include fontPrimary();
+  font-family: 'Red Hat Mono', monospace;
   @include themePrimary();
   box-sizing: border-box;
   margin: 0;
@@ -68,6 +67,22 @@ body {
   }
 
 }
+
+.gameBar {
+  @include flexRow();
+  @include themeAccent();
+  align-items: center;
+  justify-content: flex-end;
+  figure {
+    @include flexCol();
+    justify-content: center;
+    align-items: center;
+    img {
+    width: 40px;
+    }
+  }
+}
+
 
 // Media Queries
 

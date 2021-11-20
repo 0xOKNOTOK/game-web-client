@@ -1,4 +1,5 @@
 import React from 'react'
+import { AllGames } from './components/AllGames'
 import { Container } from './components/Container'
 import { GameBar } from './components/GameBar'
 import { Header } from './components/Header'
@@ -9,7 +10,10 @@ const App: React.FC = () => {
       <Header
         user={{ userName: 'rossgr', userBalance: 20, userNotifications: 2 }}
       />
-      <GameBar />
+      <section className='gamebar-parent'>
+        <AllGames />
+        <GameBar />
+      </section>
     </Container>
   )
 }

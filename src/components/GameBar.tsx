@@ -1,4 +1,5 @@
 import React from 'react'
+import { AllGames } from './AllGames'
 import { GameIcon } from './GameIcon'
 
 export const GameBar: React.FC = (): React.ReactElement => {

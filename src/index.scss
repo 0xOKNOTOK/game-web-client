@@ -38,6 +38,12 @@ $textPrimary: #ffffff;
   padding: 2% 0%;
 }
 
+@mixin border{
+  border: 1px solid $highlightColour;
+  border-radius: 4px;
+
+}
+
 
 // Global Stylings
 body {
@@ -82,21 +88,39 @@ html {
 
 }
 
-.gameBar {
+
+.gamebar-parent {
   @include flexRow();
-  @include themeAccent();
   align-items: center;
-  justify-content: flex-end;
-  figure {
-    @include flexCol();
-    justify-content: center;
+  justify-content: space-between;
+  .allgames {
+    width: 10%;
+    @include themeAccent();
+    height: 100%;
+    margin-right: 10px;
+    @include border();
+    
+  }
+  .all-games-btn {
+    height: 100%
+  }
+  .gameBar {
+    @include border();
+    @include flexRow();
+    @include themeAccent();
     align-items: center;
-    img {
-    width: 40px;
+    width: 90%;
+    justify-content: flex-end;
+    figure {
+      @include flexCol();
+      justify-content: center;
+      align-items: center;
+      img {
+      width: 40px;
+      }
     }
   }
 }
-
 
 // Media Queries
 

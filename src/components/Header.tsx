@@ -7,15 +7,19 @@ interface User {
   userAvatar?: string
 }
 
-export const Header: React.FC<User> = props => {
+interface Props {
+  user: User
+}
+
+export const Header: React.FC<Props> = ({ user }): React.ReactElement => {
   return (
     <header className='brand'>
       <main className='topbar'>
         <h3>Gameyo</h3>
         <span className='userDetails'>
-          <p>{props.userBalance}</p>
-          <p>{props.userNotifications}</p>
-          <p>{props.userName}</p>
+          <p>{user.userBalance}</p>
+          <p>{user.userNotifications}</p>
+          <p>{user.userName}</p>
         </span>
       </main>
     </header>

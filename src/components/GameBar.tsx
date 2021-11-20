@@ -1,7 +1,7 @@
 import React from 'react'
 import { GameIcon } from './GameIcon'
 
-export const GameBar: React.FC = () => {
+export const GameBar: React.FC = (): React.ReactElement => {
   return (
     <header className='gameBar'>
       <GameIcon

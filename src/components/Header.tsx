@@ -1,10 +1,12 @@
 import React from 'react'
-import { Container } from './Container'
 
 export const Header: React.FC = () => {
   return (
-    <Container class='header'>
-      <h3>Gamyo</h3>
-    </Container>
+    <header>
+      <main className='topbar'>
+        <h3>Gameyo</h3>
+        <span>[X]</span>
+      </main>
+    </header>
   )
 }

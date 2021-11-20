@@ -4,7 +4,7 @@
 // Colour variables.
 $backgroundColour: #000000;
 $accentColour: #240090;
-$accentDarkColour: #190061;
+$accentDarkColour: hsl(255, 100%, 19%);
 $shadowColour: #0C0032;
 $highlightColour: #3500d3;
 $textPrimary: #ffffff;
@@ -42,10 +42,17 @@ $textPrimary: #ffffff;
 // Global Stylings
 body {
   font-family: 'Red Hat Mono', monospace;
-  @include themePrimary();
+  color: white;
   box-sizing: border-box;
   margin: 0;
   font-size: 16px;
+}
+html { 
+  background: url('../src/assets/gradient.svg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 // Component Stylings

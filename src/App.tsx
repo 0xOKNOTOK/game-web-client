@@ -6,7 +6,7 @@ import { Header } from './components/Header'
 const App: React.FC = () => {
   return (
     <Container class='container'>
-      <Header />
+      <Header userName='rossgr' userNotifications={2} userBalance={15} />
       <GameBar />
     </Container>
   )

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Red+Hat+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;700&display=swap');
 
 
 // Colour variables.
@@ -16,10 +16,6 @@ $textPrimary: #ffffff;
   font-family: 'Red Hat Mono', monospace;
 }
 
-@mixin fontSecondary {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: lighter;
-}
 
 @mixin themeAccent {
   background-color: $accentColour;
@@ -59,7 +55,7 @@ body {
   width: 100%;
 }
 
-header {
+.brand {
   width: 100%;
   @include flexRow();
   .topbar {

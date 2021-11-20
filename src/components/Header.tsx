@@ -17,7 +17,7 @@ export const Header: React.FC<Props> = ({ user }): React.ReactElement => {
       <main className='topbar'>
         <h3>Gameyo</h3>
         <span className='userDetails'>
-          <p>{user.userBalance}</p>
+          <p>${user.userBalance}</p>
           <p>{user.userNotifications}</p>
           <p>{user.userName}</p>
         </span>

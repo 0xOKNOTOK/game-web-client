@@ -98,23 +98,32 @@ html {
 
 
 .gamebar-parent {
+  @include margin();
   @include flexRow();
   align-items: center;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
   .allgames {
     @include border();
     @include flexRow();
     @include themeAccent();
     align-items: center;
     justify-content: center;
-    width: 11%;
+    width: 5%;
+    min-width: 100px;
     height: 100%;
     justify-content: flex-end;
     height: 70px;
     .all-games-btn {
       max-height: 70px;
       height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 20px;
+        filter: invert(100%);
+      }
     }
     
   }
@@ -126,7 +135,7 @@ html {
     @include flexRow();
     @include themeAccent();
     align-items: center;
-    width: 88%;
+    width: 84%;
     height: 100%;
     justify-content: flex-start;
     align-content: flex-start;
@@ -147,7 +156,12 @@ html {
 
 figure:hover {
   @include hoverStyle();
+}
 
+.main {
+  @include themeAccent();
+  @include border();
+  @include margin();
 }
 
 // Media Queries

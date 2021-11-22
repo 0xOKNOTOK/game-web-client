@@ -3,6 +3,7 @@ import { AllGames } from './components/AllGames'
 import { Container } from './components/Container'
 import { GameBar } from './components/GameBar'
 import { Header } from './components/Header'
+import { MainScreen } from './components/MainScreen'
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <AllGames />
         <GameBar />
       </section>
+      <MainScreen />
     </Container>
   )
 }

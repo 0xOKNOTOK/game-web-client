@@ -47,7 +47,10 @@ $textPrimary: #ffffff;
   background-color: $accentColour;
   transition-duration: 300ms;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+
 
 
 // Global Stylings
@@ -126,13 +129,15 @@ html {
     width: 88%;
     height: 100%;
     justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
     height: 70px;
     figure {
       @include flexCol();
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding: 3px 10px;
+      padding: 4px 15px;
       img {
       width: 40px;
       }
@@ -171,3 +176,6 @@ figure:hover {
     }
   }
 }
+
+
+// Keyframes

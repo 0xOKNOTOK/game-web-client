@@ -9,7 +9,6 @@ export const GameIcon: React.FC<Props> = ({ name, image }) => {
   return (
     <figure>
       <img className='gameicon' src={image} alt={name} />
-      <figcaption>{name}</figcaption>
     </figure>
   )
 }

@@ -5,7 +5,7 @@
 $backgroundColour: #000000;
 $accentColour: #240090;
 $accentDarkColour: hsl(255, 100%, 19%);
-$shadowColour: #0C0032;
+$shadowColour: #0d0216;
 $highlightColour: #3500d3;
 $textPrimary: #ffffff;
 
@@ -17,7 +17,7 @@ $textPrimary: #ffffff;
 
 
 @mixin themeAccent {
-  background-color: $accentColour;
+  background-color: $shadowColour;
 }
 
 @mixin flexRow {
@@ -41,7 +41,12 @@ $textPrimary: #ffffff;
 @mixin border{
   border: 1px solid $highlightColour;
   border-radius: 4px;
+}
 
+@mixin hoverStyle {
+  background-color: $accentColour;
+  transition-duration: 300ms;
+  cursor: pointer;
 }
 
 
@@ -92,13 +97,22 @@ html {
 .gamebar-parent {
   @include flexRow();
   align-items: center;
+  width: 100%;
   justify-content: space-between;
   .allgames {
-    width: 10%;
-    @include themeAccent();
-    height: 100%;
-    margin-right: 10px;
     @include border();
+    @include flexRow();
+    @include themeAccent();
+    align-items: center;
+    justify-content: center;
+    width: 11%;
+    height: 100%;
+    justify-content: flex-end;
+    height: 70px;
+    .all-games-btn {
+      max-height: 70px;
+      height: 70px;
+    }
     
   }
   .all-games-btn {
@@ -109,17 +123,26 @@ html {
     @include flexRow();
     @include themeAccent();
     align-items: center;
-    width: 90%;
-    justify-content: flex-end;
+    width: 88%;
+    height: 100%;
+    justify-content: flex-start;
+    height: 70px;
     figure {
       @include flexCol();
       justify-content: center;
       align-items: center;
+      height: 100%;
+      padding: 3px 10px;
       img {
       width: 40px;
       }
     }
   }
+}
+
+figure:hover {
+  @include hoverStyle();
+
 }
 
 // Media Queries

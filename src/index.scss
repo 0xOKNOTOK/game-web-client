@@ -2,11 +2,11 @@
 
 
 // Colour variables.
-$backgroundColour: #00111C;
-$accentColour: #00406C;
+$backgroundColour: #15181e;
+$accentColour: #0177dc;
 $accentDarkColour: hsl(255, 100%, 19%);
 $shadowColour: #002E4E;
-$highlightColour: #5990b4;
+$highlightColour: #3d4044;
 $textPrimary: #ffffff;
 
 // Mixins
@@ -15,10 +15,11 @@ $textPrimary: #ffffff;
   color: $textPrimary;
 }
 
-
-@mixin themeAccent {
-  background-color: $shadowColour;
+@mixin themeTransparent {
+  background-color: #92969c27;
 }
+
+
 
 @mixin flexRow {
   display: flex;
@@ -39,7 +40,6 @@ $textPrimary: #ffffff;
 }
 
 @mixin border{
-  border: 1px solid $highlightColour;
   border-radius: 4px;
 }
 
@@ -100,6 +100,7 @@ html {
 
 
 .gamebar-parent {
+
   @include margin();
   @include flexRow();
   align-items: center;
@@ -108,9 +109,9 @@ html {
   overflow-y: hidden;
   scrollbar-width: thin;
   .allgames {
+    @include themeTransparent();
     @include border();
     @include flexRow();
-    @include themeAccent();
     align-items: center;
     justify-content: center;
     width: 5%;
@@ -119,7 +120,7 @@ html {
     justify-content: flex-end;
     height: 70px;
     scrollbar-width: thin;
-    margin-right: 10px;
+    margin-right: 20px;
     .all-games-btn {
       max-height: 70px;
       height: 70px;
@@ -138,21 +139,22 @@ html {
     height: 100%
   }
   .gameBar {
+    @include themeTransparent();
+    @include border();
+    @include flexRow();
     .gameBar::-webkit-scrollbar {
       display: none;
     }
     -ms-overflow-style: none;  
     scrollbar-width: none; 
-    @include border();
-    @include flexRow();
-    @include themeAccent();
     align-items: center;
-  
+    width: 100%;
     height: 100%;
     justify-content: flex-start;
     align-content: flex-start;
     flex-wrap: nowrap;
     height: 70px;
+
     figure {
       @include flexCol();
       justify-content: center;
@@ -175,7 +177,6 @@ figure:hover {
 }
 
 .main {
-  @include themeAccent();
   @include border();
   @include margin();
   @include flexRow();

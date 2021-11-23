@@ -31,11 +31,11 @@ $textPrimary: #ffffff;
 }
 
 @mixin margin {
-  margin: 2% 5%;
+  margin: 1% 5%;
 }
 
 @mixin padding {
-  padding: 2% 0%;
+  padding: 5px 10px;
 }
 
 @mixin border{
@@ -54,7 +54,7 @@ $textPrimary: #ffffff;
 
 
 // Global Stylings
-body {
+body, button {
   font-family: 'Red Hat Mono', monospace;
   color: white;
   box-sizing: border-box;
@@ -87,8 +87,15 @@ html {
 
     .userDetails {
       @include flexRow();
-      p {
-        margin: 10px
+      @include padding();
+      @include border();
+      margin: 5px;
+      button {
+        @include padding();
+        @include hoverStyle();
+        margin: 10px;
+        border: 0px;
+        
       }
     }
 
@@ -167,7 +174,7 @@ figure:hover {
   @include border();
   @include margin();
   @include flexRow();
-  height: 550px;
+  height: 650px;
   
 
 }

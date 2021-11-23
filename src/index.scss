@@ -2,8 +2,8 @@
 
 
 // Colour variables.
-$backgroundColour: #15181e;
-$accentColour: #0177dc;
+$backgroundColour: #1e1f20;
+$accentColour: #ce0b56;
 $accentDarkColour: hsl(255, 100%, 19%);
 $shadowColour: #002E4E;
 $highlightColour: #3d4044;
@@ -44,10 +44,9 @@ $textPrimary: #ffffff;
 }
 
 @mixin hoverStyle {
-  background-color: $accentColour;
-  transition-duration: 300ms;
+  background-color: $highlightColour;
+  transition-duration: 200ms;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 
@@ -150,17 +149,19 @@ html {
     align-items: center;
     width: 100%;
     height: 100%;
-    justify-content: flex-start;
-    align-content: flex-start;
+    justify-content: stretch;
+    align-self: flex-start;
     flex-wrap: nowrap;
     height: 70px;
 
     figure {
+      margin: 0;
+
       @include flexCol();
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding: 4px 15px;
+      padding: 4px 20px;
       img {
       width: 40px;
       }

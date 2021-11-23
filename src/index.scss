@@ -109,6 +109,9 @@ html {
   @include flexRow();
   align-items: center;
   justify-content: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
   .allgames {
     @include border();
     @include flexRow();
@@ -120,6 +123,7 @@ html {
     height: 100%;
     justify-content: flex-end;
     height: 70px;
+    scrollbar-width: thin;
     .all-games-btn {
       max-height: 70px;
       height: 70px;
@@ -138,6 +142,11 @@ html {
     height: 100%
   }
   .gameBar {
+    .gameBar::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
     @include border();
     @include flexRow();
     @include themeAccent();
@@ -208,3 +217,20 @@ figure:hover {
 
 
 // Keyframes
+// Scrollbar 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(24, 18, 117, 1)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  height: 1px;
+  width: 1px;
+  background: $shadowColour;
+}

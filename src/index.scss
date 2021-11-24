@@ -61,6 +61,14 @@ body, button {
 html {
   background-color: $backgroundColour;
 }
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
 // Component Stylings
 
 .container {
@@ -154,7 +162,6 @@ html {
 
     figure {
       margin: 0;
-
       @include flexCol();
       justify-content: center;
       align-items: center;
@@ -217,23 +224,36 @@ figure:hover {
 
 // Media Queries
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px ) and (max-width: 800px) {
   h3 {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
-
   .userDetails {
     p {
       font-size: calc(16px + -3 * ((100vw - 320px) / 680));
     }
   }
+  .main {
+    @include flexCol();
+    }
+    .news-section {
+  
+    }
+    .friends-list {
+  
+    }
+    
+  
+  }
+  
 
-}
+
 @media screen and (min-width: 1000px) {
   h3 {
     font-size: 2rem;
 
   }
+  
 
   .userDetails {
     p {

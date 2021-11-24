@@ -8,7 +8,7 @@ export const CurrentGame: React.FC = (): React.ReactElement => {
   }
 
   return (
-    <Container class='news-section'>
+    <Container class='current-game'>
       <h2>GAME_ICON</h2>
       <p>Game</p>
       <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />

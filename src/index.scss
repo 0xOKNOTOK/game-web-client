@@ -3,7 +3,7 @@
 
 // Colour variables.
 $backgroundColour: #1e1f20;
-$accentColour: #ce0b56;
+$accentColour: #0b5fce;
 $accentDarkColour: hsl(255, 100%, 19%);
 $shadowColour: #002E4E;
 $highlightColour: #3d4044;
@@ -66,7 +66,7 @@ html {
 .container {
   width: 100%;
 }
-
+// Navigation Bar
 .brand {
   width: 100%;
   @include flexRow();
@@ -95,7 +95,7 @@ html {
 
 }
 
-
+// Gamebar 
 .gamebar-parent {
 
   @include margin();
@@ -175,6 +175,8 @@ figure:hover {
   @include hoverStyle();
 }
 
+
+// Main App Section
 .main {
   @include border();
   @include margin();
@@ -188,6 +190,19 @@ figure:hover {
       ". . .";
       
   .current-game {
+    .btn-large {
+      padding: 20px 100px;
+      background-color: $accentColour;
+      font-size: 20px;
+      @include border();
+      outline: none;
+      cursor: pointer;
+      border: none;
+      font-weight: bolder;
+    }
+    .btn-large:hover {
+      @include hoverStyle()
+    }
     
   }
   .news-section {

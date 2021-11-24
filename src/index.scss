@@ -210,6 +210,19 @@ figure:hover {
     .btn-large:hover {
       @include hoverStyle()
     }
+    .btn-icon {
+      padding: 20px 2px;
+      background-color: $accentColour;
+      font-size: 20px;
+      @include border();
+      border-left: 1px solid $textPrimary;
+      outline: none;
+      cursor: pointer;
+      border-top: none;
+    }
+    .btn-icon:hover {
+      @include hoverStyle()
+    }
     
   }
   .news-section {

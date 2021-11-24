@@ -7,7 +7,13 @@ import { NewsSection } from './NewsSection'
 export const MainScreen: React.FC = (): React.ReactElement => {
   return (
     <Container class='main'>
-      <CurrentGame />
+      <CurrentGame
+        game={{
+          name: 'World Of Warcraft',
+          version: '9.2.1',
+          gameLogo: 'https://example.com',
+        }}
+      />
       <NewsSection />
       <FriendsList />
     </Container>

@@ -2,7 +2,17 @@ import React from 'react'
 import { ButtonLarge } from './ButtonLarge'
 import { Container } from './Container'
 
-export const CurrentGame: React.FC = (): React.ReactElement => {
+interface Props {
+  game: Game
+}
+
+interface Game {
+  name: string
+  version: string
+  gameLogo: string
+}
+
+export const CurrentGame: React.FC<Props> = ({ game }): React.ReactElement => {
   const handleButtonClick = (e: React.MouseEvent) => {
     e.preventDefault()
   }
@@ -10,8 +20,9 @@ export const CurrentGame: React.FC = (): React.ReactElement => {
   return (
     <Container class='current-game'>
       <h2>GAME_ICON</h2>
-      <p>Game</p>
+      <p>{game.name}</p>
       <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />
+      <p>Version: {game.version}</p>
     </Container>
   )
 }

@@ -201,7 +201,7 @@ figure:hover {
       @include flexRow();
     }
     .btn-large {
-      padding: 20px 100px;
+      padding: 13px 100px;
       background-color: $accentColour;
       font-size: 20px;
       @include border();
@@ -214,16 +214,19 @@ figure:hover {
       @include hoverStyle()
     }
     .btn-icon {
-      padding: 20px 10px;
+      margin-left: 3px;
+      padding: 13px 10px;
       @include border();
       background-color: $accentColour;
       font-size: 20px;
       border: none;
       outline: none;
       cursor: pointer;
+      display: flex;
+      align-items: center;
        img {
-         filter: invert(1);
-        width: 30px;;
+        filter: invert(1);
+        width: 20px;
      }
     }
     .btn-icon:hover {

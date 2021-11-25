@@ -8,15 +8,9 @@ export const FriendsList: React.FC = (): React.ReactElement => {
       <h2>Friends</h2>
       <ul>
         <li>
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
-          <FriendCard />
+          <FriendCard
+            friend={{ username: 'Moo', image: 'Hi', status: 'online' }}
+          />
         </li>
       </ul>
     </Container>

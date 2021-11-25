@@ -1,7 +1,17 @@
 import React from 'react'
 import { Container } from './Container'
 
-export const FriendCard: React.FC = () => {
+interface Props {
+  friend?: Friend
+}
+
+interface Friend {
+  username: string
+  image: string
+  status: string
+}
+
+export const FriendCard: React.FC<Props> = ({ friend }) => {
   return (
     <Container class='friend-card'>
       <img src='' />

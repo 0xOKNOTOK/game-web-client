@@ -40,7 +40,7 @@ $textPrimary: #ffffff;
 }
 
 @mixin border{
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 @mixin hoverStyle {
@@ -60,6 +60,10 @@ body, button {
 }
 html {
   background-color: $backgroundColour;
+}
+
+p {
+  font-weight: lighter;
 }
 
 ul {
@@ -188,6 +192,7 @@ figure:hover {
   @include border();
   @include margin();
   @include flexRow();
+  height: 70vh;
     display: grid; 
     grid-auto-flow: column; 
     grid-template-columns: 0.9fr 1.5fr 0.6fr; 
@@ -197,6 +202,12 @@ figure:hover {
       ". . .";
       
   .current-game {
+    height: 100%;
+    @include flexCol();
+    justify-content: space-between;
+
+    .game-play-bottom {
+    }
     .btn-wrapper {
       @include flexRow();
     }
@@ -227,6 +238,7 @@ figure:hover {
        img {
         filter: invert(1);
         width: 20px;
+        height: 20px;
      }
     }
     .btn-icon:hover {

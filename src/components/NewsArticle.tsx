@@ -4,7 +4,6 @@ import { Container } from './Container'
 export const NewsArticle: React.FC = (): React.ReactElement => {
   return (
     <Container class='news-article'>
-      <h2>Latest News</h2>
       <article>
         <img />
         <figcaption>

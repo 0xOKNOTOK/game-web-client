@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from './Container'
+import { FriendCard } from './FriendCard'
 
 export const FriendsList: React.FC = (): React.ReactElement => {
   return (
@@ -7,9 +8,15 @@ export const FriendsList: React.FC = (): React.ReactElement => {
       <h2>Friends</h2>
       <ul>
         <li>
-          <span>
-            <p>Dave</p>
-          </span>
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
+          <FriendCard />
         </li>
       </ul>
     </Container>

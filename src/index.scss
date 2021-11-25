@@ -197,6 +197,9 @@ figure:hover {
       ". . .";
       
   .current-game {
+    .btn-wrapper {
+      @include flexRow();
+    }
     .btn-large {
       padding: 20px 100px;
       background-color: $accentColour;
@@ -211,18 +214,22 @@ figure:hover {
       @include hoverStyle()
     }
     .btn-icon {
-      padding: 20px 2px;
+      padding: 20px 10px;
+      @include border();
       background-color: $accentColour;
       font-size: 20px;
-      @include border();
-      border-left: 1px solid $textPrimary;
+      border: none;
       outline: none;
       cursor: pointer;
-      border-top: none;
+       img {
+         filter: invert(1);
+        width: 30px;;
+     }
     }
     .btn-icon:hover {
       @include hoverStyle()
     }
+  
     
   }
   .news-section {

@@ -192,7 +192,6 @@ figure:hover {
   @include border();
   @include margin();
   @include flexRow();
-  height: 70vh;
     display: grid; 
     grid-auto-flow: column; 
     grid-template-columns: 0.9fr 1.5fr 0.6fr; 
@@ -202,12 +201,10 @@ figure:hover {
       ". . .";
       
   .current-game {
-    height: 700px;
+    height: 650px;
     @include flexCol();
     justify-content: space-between;
 
-    .game-play-bottom {
-    }
     .btn-wrapper {
       @include flexRow();
     }
@@ -301,12 +298,13 @@ figure:hover {
 // Keyframes
 // Scrollbar 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
+  height: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(24, 18, 117, 1)
+  background: $backgroundColour;
 }
 
 /* Handle */
@@ -314,5 +312,6 @@ figure:hover {
   border-radius: 10px;
   height: 1px;
   width: 1px;
-  background: $shadowColour;
+  background: $accentColour;
 }
+

@@ -7,6 +7,7 @@ $accentColour: #0b5fce;
 $accentDarkColour: hsl(255, 100%, 19%);
 $shadowColour: #002E4E;
 $highlightColour: #3d4044;
+$accentColourPink: #ffc0cb;
 $textPrimary: #ffffff;
 
 // Mixins
@@ -245,8 +246,14 @@ figure:hover {
     
   }
   .news-section {
+    .news-article {
+    }
+
+ 
 
   }
+
+
   .friends-list {
 
   }

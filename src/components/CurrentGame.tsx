@@ -10,7 +10,7 @@ interface Props {
 interface Game {
   name: string
   version: string
-  gameLogo: string
+  logo: string
 }
 
 export const CurrentGame: React.FC<Props> = ({ game }): React.ReactElement => {
@@ -19,15 +19,16 @@ export const CurrentGame: React.FC<Props> = ({ game }): React.ReactElement => {
   }
 
   return (
-    <Container class='current-game'>
-      <h2>GAME_ICON</h2>
-      <p>{game.name}</p>
-      <span className='btn-wrapper'>
-        <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />
-        <ButtonIcon buttonLabel='SET' onClick={handleButtonClick} />
-      </span>
-
-      <p>Version: {game.version}</p>
-    </Container>
+    <div>
+      <Container class='current-game'>
+        <h2>GAME_ICON</h2>
+        <p>{game.name}</p>
+        <span className='btn-wrapper'>
+          <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />
+          <ButtonIcon onClick={handleButtonClick}></ButtonIcon>
+        </span>
+        <p>Version: {game.version}</p>
+      </Container>
+    </div>
   )
 }

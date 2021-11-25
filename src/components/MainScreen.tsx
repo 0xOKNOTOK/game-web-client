@@ -11,7 +11,7 @@ export const MainScreen: React.FC = (): React.ReactElement => {
         game={{
           name: 'World Of Warcraft',
           version: '9.2.1',
-          gameLogo: 'https://example.com',
+          logo: 'https://example.com',
         }}
       />
       <NewsSection />

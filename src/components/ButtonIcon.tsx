@@ -1,14 +1,13 @@
 import React from 'react'
-
+import settingsIcon from '../assets/settings.svg'
 interface Props {
-  buttonLabel: string
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const ButtonIcon: React.FC<Props> = ({ buttonLabel, onClick }) => {
+export const ButtonIcon: React.FC<Props> = ({ onClick, children }) => {
   return (
     <button className='btn-icon' onClick={onClick}>
-      {buttonLabel}
+      <img src={settingsIcon} alt='settings icon' />
     </button>
   )
 }

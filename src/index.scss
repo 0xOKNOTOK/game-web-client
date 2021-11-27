@@ -165,6 +165,10 @@ ul {
     flex-wrap: nowrap;
     height: 70px;
 
+    .add-game {
+      filter: invert(100);
+    }
+
     figure {
       margin: 0;
       @include flexCol();

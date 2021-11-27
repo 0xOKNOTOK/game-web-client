@@ -5,6 +5,7 @@ interface User {
   userNotifications: number
   userBalance: number
   userAvatar?: string
+  userLocation: string
 }
 
 interface Props {
@@ -17,6 +18,7 @@ export const Header: React.FC<Props> = ({ user }): React.ReactElement => {
       <main className='topbar'>
         <h3>Gameyo</h3>
         <span className='userDetails'>
+          <button>{user.userLocation}</button>
           <button>${user.userBalance}</button>
           <button>{user.userNotifications}</button>
           <button>{user.userName}</button>

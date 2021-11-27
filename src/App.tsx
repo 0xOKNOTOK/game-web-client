@@ -9,7 +9,12 @@ const App: React.FC = () => {
   return (
     <Container class='container'>
       <Header
-        user={{ userName: 'rossgr', userBalance: 20, userNotifications: 2 }}
+        user={{
+          userName: 'rossgr',
+          userBalance: 20,
+          userNotifications: 2,
+          userLocation: 'UK',
+        }}
       />
       <section className='gamebar-parent'>
         <AllGames />

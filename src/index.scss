@@ -3,12 +3,12 @@
 
 // Colour variables.
 $backgroundColour: #1e1f20;
-$accentColour: #0b5fce;
-$accentDarkColour: hsl(255, 100%, 19%);
+$accentColour: #EB5757;
+$accentDarkColour: #a53e3e;
 $shadowColour: #002E4E;
-$highlightColour: #363638;
-$accentColourPink: #ffc0cb;
+$highlightColour: #fa7c7c;
 $textPrimary: #ffffff;
+$opaqueHighlight: #ffffff27;
 
 // Mixins
 @mixin themePrimary {
@@ -275,6 +275,10 @@ figure:hover {
 
 
   .friends-list {
+    @include flexCol();
+    @include border();
+    @include padding();
+    background-color: $opaqueHighlight;
 
   }
   

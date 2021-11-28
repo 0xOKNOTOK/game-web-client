@@ -272,7 +272,7 @@ figure:hover {
     .news-article {
       margin-bottom: 20px;
       @include border();
-      @include themePrimary();
+      background-color: rgba(0, 0, 0, 0.233);
       @include flexRow();
       img {
         width: 30%;

@@ -266,7 +266,36 @@ figure:hover {
     
   }
   .news-section {
+    background-color: $opaqueHighlight;
+    @include border();
+    @include padding();
     .news-article {
+      margin-bottom: 20px;
+      @include border();
+      @include themePrimary();
+      @include flexRow();
+      img {
+        width: 30%;
+      }
+      figcaption {
+        h4 {
+          margin-bottom: 10px;
+        }
+        @include margin();
+        width: 70%;
+        @include flexCol();
+        justify-content: center;
+        
+      }
+      button {
+        width: 50%;
+        background-color: $accentColour;
+        border: none;
+        @include border();
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
     }
 
  

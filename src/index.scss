@@ -50,6 +50,10 @@ $opaqueHighlight: #ffffff27;
   cursor: pointer;
 }
 
+@mixin fontOveride {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
 
 // Global Stylings
 body, button {
@@ -219,12 +223,31 @@ figure:hover {
         margin-top: 30px;
       }
     }
-    
- 
 
-    h4 {
-      font-weight: 400;
+    .game-play-bottom {
+      select {
+        @include themeTransparent();
+        @include fontOveride();
+        @include border();
+        font-size: 1rem;
+        border: none;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 75%;
+        color: white;
+        font-weight: bold;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        option {
+          @include padding();
+          margin: 10px;
+          background-color: $backgroundColour;
+          color: white;
+        }
+      }
     }
+
 
     .btn-wrapper {
       @include flexRow();

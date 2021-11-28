@@ -3,6 +3,7 @@ import { ButtonIcon } from './ButtonIcon'
 import { ButtonLarge } from './ButtonLarge'
 import { Container } from './Container'
 import wowWotlk from '../assets/wow_wotlk_placeholder.png'
+import { Input } from './Input'
 
 interface Props {
   game: Game
@@ -27,7 +28,14 @@ export const CurrentGame: React.FC<Props> = ({ game }): React.ReactElement => {
         </div>
 
         <div className='game-play-bottom'>
-          <h4>{game.name}</h4>
+          <Input
+            class='version-selector'
+            versions={{
+              basegame: 'Retail',
+              beta: 'Beta',
+              additional: 'Classic',
+            }}
+          />
           <span className='btn-wrapper'>
             <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />
             <ButtonIcon onClick={handleButtonClick}></ButtonIcon>

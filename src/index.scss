@@ -10,6 +10,7 @@ $highlightColour: #6ba9fa;
 $shadowColour: #002E4E;
 $textPrimary: #ffffff;
 $opaqueHighlight: #ffffff27;
+$darkerShadow: #0000003b;
 
 // Mixins
 @mixin themePrimary {
@@ -98,7 +99,6 @@ ul {
   align-items: center;
   justify-content: center;
   .popup-menu {
-    
       @include border();
       padding: 1px 20px;
       width: 40%;
@@ -390,6 +390,10 @@ figure:hover {
   
     }
     .friends-list {
+      .friend-card {
+        background-color: $darkerShadow;
+        height: 200px;
+      }
   
     }
     

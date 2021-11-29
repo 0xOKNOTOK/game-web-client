@@ -1,5 +1,4 @@
 import React from 'react'
-import { ButtonIcon } from './ButtonIcon'
 import { Container } from './Container'
 
 interface Props {

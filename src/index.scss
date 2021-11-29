@@ -331,7 +331,7 @@ figure:hover {
     .news-article {
       margin-bottom: 20px;
       @include border();
-      background-color: rgba(0, 0, 0, 0.233);
+      background-color: $darkerShadow;
       @include flexRow();
       img {
         width: 30%;
@@ -366,7 +366,28 @@ figure:hover {
     @include flexCol();
     @include border();
     @include padding();
-
+    
+    .friend-card {
+      @include padding();
+      @include border();
+      margin-bottom: 10px;
+      background-color: $darkerShadow;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      @include flexRow();
+      img {
+        margin-right: 20px;
+        @include border();
+        width: 50px;
+        height: 50px;
+      }
+      h3, p {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+      
+    }
   }
   
 

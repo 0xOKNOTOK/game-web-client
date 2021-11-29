@@ -12,6 +12,26 @@ export const FriendsList: React.FC = (): React.ReactElement => {
             friend={{ username: 'Moo', image: 'Hi', status: 'online' }}
           />
         </li>
+        <li>
+          <FriendCard
+            friend={{ username: 'Moo', image: 'Hi', status: 'online' }}
+          />
+        </li>
+        <li>
+          <FriendCard
+            friend={{ username: 'Moo', image: 'Hi', status: 'online' }}
+          />
+        </li>
+        <li>
+          <FriendCard
+            friend={{ username: 'Moo', image: 'Hi', status: 'online' }}
+          />
+        </li>
+        <li>
+          <FriendCard
+            friend={{ username: 'Moo', image: 'Hi', status: 'online' }}
+          />
+        </li>
       </ul>
     </Container>
   )

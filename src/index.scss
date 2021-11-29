@@ -33,7 +33,7 @@ $opaqueHighlight: #ffffff27;
 }
 
 @mixin margin {
-  margin: 1% 5%;
+  margin: 1% 2%;
 }
 
 @mixin padding {
@@ -92,7 +92,7 @@ ul {
   @include flexRow();
   .topbar {
     @include flexRow();
-    @include margin();
+    margin: 0% 2%;
     justify-content: space-between;
     align-items: center;
     width: 100%;

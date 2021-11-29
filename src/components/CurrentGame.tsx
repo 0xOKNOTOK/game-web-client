@@ -21,11 +21,18 @@ export const CurrentGame: React.FC<Props> = ({
   updatePopUpMenu,
 }): React.ReactElement => {
   const handleSettingsButtonClick = (e: React.MouseEvent) => {
+    const content = {
+      title: 'Chicken',
+    }
     e.preventDefault()
-    updatePopUpMenu()
+    updatePopUpMenu(content)
   }
 
   const handlePlayButtonClick = (e: React.MouseEvent) => {
+    const content = {
+      title: 'Launch',
+    }
+    updatePopUpMenu(content)
     e.preventDefault()
   }
 

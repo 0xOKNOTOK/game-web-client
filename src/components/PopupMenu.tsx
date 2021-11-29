@@ -3,10 +3,16 @@ import { Container } from './Container'
 
 interface Props {
   updatePopUpMenu: Function
+  popUpContent: Content
+}
+
+interface Content {
+  title: string
 }
 
 export const PopupMenu: React.FC<Props> = ({
   updatePopUpMenu,
+  popUpContent,
 }): React.ReactElement => {
   const handleCloseButton = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -17,7 +23,7 @@ export const PopupMenu: React.FC<Props> = ({
     <Container class='popup-container'>
       <Container class='popup-menu'>
         <Container class='popup-header'>
-          <h1>Settings</h1>
+          <h1>{popUpContent.title}</h1>
           <button className='btn-close' onClick={handleCloseButton}>
             X
           </button>

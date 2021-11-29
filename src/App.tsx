@@ -8,13 +8,21 @@ import { PopupMenu } from './components/PopupMenu'
 
 const App: React.FC = () => {
   const [popUpMenuBool, setPopUpMenuBool] = useState(false)
+  const [popUpMenuContent, setPopUpMenuContent] = useState({ title: '' })
 
-  const updatePopUpMenu = () => {
+  const updatePopUpMenu = (content: any) => {
     setPopUpMenuBool(!popUpMenuBool)
+    setPopUpMenuContent(content)
   }
+
   return (
     <Container class='container'>
-      {popUpMenuBool ? <PopupMenu updatePopUpMenu={updatePopUpMenu} /> : null}
+      {popUpMenuBool ? (
+        <PopupMenu
+          updatePopUpMenu={updatePopUpMenu}
+          popUpContent={popUpMenuContent}
+        />
+      ) : null}
       <Header
         user={{
           userName: 'rossgr',

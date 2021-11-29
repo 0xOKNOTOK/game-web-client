@@ -3,10 +3,10 @@
 
 // Colour variables.
 $backgroundColour: #1e1f20;
-$accentColour: #EB5757;
+$accentColour: #2381fc;
 $accentDarkColour: #a53e3e;
+$highlightColour: #6ba9fa;
 $shadowColour: #002E4E;
-$highlightColour: #fa7c7c;
 $textPrimary: #ffffff;
 $opaqueHighlight: #ffffff27;
 
@@ -64,9 +64,9 @@ body, button {
   font-size: 16px;
 }
 html {
-  background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
 }
 
@@ -289,7 +289,6 @@ figure:hover {
     
   }
   .news-section {
-    background-color: $opaqueHighlight;
     @include border();
     @include padding();
     .news-article {
@@ -330,7 +329,6 @@ figure:hover {
     @include flexCol();
     @include border();
     @include padding();
-    background-color: $opaqueHighlight;
 
   }
   

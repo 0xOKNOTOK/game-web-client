@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
 
 
 // Colour variables.
@@ -53,13 +53,13 @@ $darkerShadow: #0000003b;
 }
 
 @mixin fontOveride {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 
 // Global Stylings
 body, button {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   color: white;
   box-sizing: border-box;
   margin: 0;

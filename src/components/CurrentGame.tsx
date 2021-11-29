@@ -45,7 +45,9 @@ export const CurrentGame: React.FC<Props> = ({
             <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />
             <ButtonIcon onClick={handleButtonClick}></ButtonIcon>
           </span>
-          <p>Version: {game.version}</p>
+          <p>
+            Version: <strong>{game.version}</strong>
+          </p>
         </div>
       </Container>
     </div>

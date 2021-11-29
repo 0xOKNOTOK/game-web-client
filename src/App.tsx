@@ -14,7 +14,7 @@ const App: React.FC = () => {
   }
   return (
     <Container class='container'>
-      {popUpMenuBool ? <PopupMenu /> : null}
+      {popUpMenuBool ? <PopupMenu updatePopUpMenu={updatePopUpMenu} /> : null}
       <Header
         user={{
           userName: 'rossgr',

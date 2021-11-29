@@ -20,9 +20,13 @@ export const CurrentGame: React.FC<Props> = ({
   game,
   updatePopUpMenu,
 }): React.ReactElement => {
-  const handleButtonClick = (e: React.MouseEvent) => {
+  const handleSettingsButtonClick = (e: React.MouseEvent) => {
     e.preventDefault()
     updatePopUpMenu()
+  }
+
+  const handlePlayButtonClick = (e: React.MouseEvent) => {
+    e.preventDefault()
   }
 
   return (
@@ -42,8 +46,8 @@ export const CurrentGame: React.FC<Props> = ({
             }}
           />
           <span className='btn-wrapper'>
-            <ButtonLarge buttonLabel='Play' onClick={handleButtonClick} />
-            <ButtonIcon onClick={handleButtonClick}></ButtonIcon>
+            <ButtonLarge buttonLabel='Play' onClick={handlePlayButtonClick} />
+            <ButtonIcon onClick={handleSettingsButtonClick}></ButtonIcon>
           </span>
           <p>
             Version: <strong>{game.version}</strong>

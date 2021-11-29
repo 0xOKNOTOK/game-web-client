@@ -17,8 +17,13 @@ export const PopupMenu: React.FC<Props> = ({
   return (
     <Container class='popup-container'>
       <Container class='popup-menu'>
-        <h1>Settings</h1>
-        <button onClick={handleCloseButton}>X</button>
+        <Container class='popup-header'>
+          <h1>Settings</h1>
+          <button className='btn-close' onClick={handleCloseButton}>
+            X
+          </button>
+        </Container>
+
         <form></form>
       </Container>
     </Container>

@@ -98,12 +98,27 @@ ul {
   align-items: center;
   justify-content: center;
   .popup-menu {
+    
       @include border();
-      @include padding();
-      padding: 20px;
+      padding: 1px 20px;
       width: 40%;
       height: 50%;
       background-color: $accentColour;
+
+      .popup-header {
+        @include flexRow();
+        justify-content: space-between;
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+      .btn-close {
+        background-color: $accentColour;
+        font-weight: bold;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+      }
   }
 
 }

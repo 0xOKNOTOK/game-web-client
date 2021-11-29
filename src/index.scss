@@ -3,6 +3,7 @@
 
 // Colour variables.
 $backgroundColour: #1e1f20;
+$shadowOpaque: #1e1f20ec;
 $accentColour: #2381fc;
 $accentDarkColour: #a53e3e;
 $highlightColour: #6ba9fa;
@@ -86,6 +87,26 @@ ul {
 .container {
   width: 100%;
 }
+
+.popup-container {
+  width: 100%;
+  height: 120%;
+  z-index: 2;
+  position: absolute;
+  background-color: $shadowOpaque;
+  @include flexRow();
+  align-items: center;
+  justify-content: center;
+  .popup-menu {
+      @include border();
+      @include padding();
+      padding: 20px;
+      width: 40%;
+      height: 50%;
+      background-color: $accentColour;
+  }
+
+}
 // Navigation Bar
 .brand {
   width: 100%;
@@ -153,7 +174,8 @@ ul {
     
   }
   .all-games-btn {
-    height: 100%
+    height: 100%;
+    z-index: 1;
   }
   .gameBar {
     @include themeTransparent();

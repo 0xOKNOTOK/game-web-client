@@ -378,10 +378,11 @@ figure:hover {
   h3 {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
+  p {
+    font-size: calc(16px + -3 * ((100vw - 320px) / 680));
+  }
   .userDetails {
-    p {
-      font-size: calc(16px + -3 * ((100vw - 320px) / 680));
-    }
+
   }
   .main {
     @include flexCol();
@@ -400,12 +401,63 @@ figure:hover {
   
   }
   
+  @media screen and (max-width: 1100px) {
+    h3 {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+    p {
+      font-size: calc(16px + -3 * ((100vw - 320px) / 680));
+    }
+    .userDetails {
+  
+    }
+    .main {
+      @include flexCol();
+      }
 
+      .current-game {
+        .game-play-top {
+          @include flexCol();
+          justify-content: center;
+          align-items: center;
+          img {
+            max-width: 50%;
+          }
+        }
+        .game-play-bottom {
+          select {
+            max-width: 50%;
+          }
+          @include flexCol();
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .news-section {
+    
+      }
+      .friends-list {
+        .friend-card {
+          background-color: $darkerShadow;
+          height: 200px;
+        }
+    
+      }
+      
+    
+    }
+    
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   h3 {
     font-size: 2rem;
 
+  }
+
+
+
+  .news-section {
+    @include flexCol();
   }
   
 

@@ -7,6 +7,7 @@ import { Input } from './Input'
 
 interface Props {
   game: Game
+  updatePopUpMenu: Function
 }
 
 interface Game {
@@ -15,9 +16,13 @@ interface Game {
   logo: string
 }
 
-export const CurrentGame: React.FC<Props> = ({ game }): React.ReactElement => {
+export const CurrentGame: React.FC<Props> = ({
+  game,
+  updatePopUpMenu,
+}): React.ReactElement => {
   const handleButtonClick = (e: React.MouseEvent) => {
     e.preventDefault()
+    updatePopUpMenu()
   }
 
   return (

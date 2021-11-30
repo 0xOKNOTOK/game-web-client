@@ -3,7 +3,7 @@
 
 Recreation of a typical desktop game launcher with elements inspired by Battle.net, Steam and Epic Games. This application has user authentication and dynamic data based on a users library, friends and other information respective to the games owned by a user.
 
-This application is for demo purposes only.
+This application is for demo purposes only, it should not be regarded as a secure usecase for authentication or typescript. 
 
 
 ## Tech Stack

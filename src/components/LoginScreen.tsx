@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container } from './Container'
 import {
   Formik,
@@ -18,14 +18,32 @@ interface loginForm {
   password: string
 }
 
+interface signUpForm {
+  email: string
+  username: string
+  password: string
+}
+
 export const LoginScreen: React.FC<Props> = ({
   setUser,
 }): React.ReactElement => {
-  const initialValues: loginForm = { username: '', password: '' }
-  return (
+  const [hasAccount, setHasAccount] = useState(true)
+
+  const handleFormSwitch = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setHasAccount(!hasAccount)
+  }
+  const initialValuesSignUp: signUpForm = {
+    email: '',
+    username: '',
+    password: '',
+  }
+  const initialValuesLogin: loginForm = { username: '', password: '' }
+
+  return hasAccount ? (
     <Container class='login-screen'>
       <Formik
-        initialValues={initialValues}
+        initialValues={initialValuesLogin}
         onSubmit={(values, actions) => {
           console.log({ values, actions })
           actions.setSubmitting(false)
@@ -47,6 +65,41 @@ export const LoginScreen: React.FC<Props> = ({
             />
           </Container>
           <button type='submit'>Log in</button>
+          <button onClick={handleFormSwitch}>Don't have an account?</button>
+        </Form>
+      </Formik>
+    </Container>
+  ) : (
+    <Container class='login-screen'>
+      <Formik
+        initialValues={initialValuesSignUp}
+        onSubmit={(values, actions) => {
+          console.log({ values, actions })
+          actions.setSubmitting(false)
+          setUser({ values })
+        }}
+      >
+        <Form>
+          <Container class='login-field'>
+            <label htmlFor='username'>Email</label>
+            <Field id='username' name='username' placeholder='Username' />
+          </Container>
+          <Container class='login-field'>
+            <label htmlFor='username'>Username</label>
+            <Field id='username' name='username' placeholder='Username' />
+          </Container>
+          <Container class='login-field'>
+            <label htmlFor='password'>Password</label>
+            <Field
+              id='password'
+              name='password'
+              placeholder='Password'
+              type='password'
+            />
+          </Container>
+
+          <button type='submit'>Sign Up</button>
+          <button onClick={handleFormSwitch}>Already have an Account?</button>
         </Form>
       </Formik>
     </Container>

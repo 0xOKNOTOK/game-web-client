@@ -99,6 +99,7 @@ ul {
     @include flexCol();
     justify-content: space-evenly;
     button {
+      margin-bottom: 10px;
       border: none;
       @include border();
       background-color: $accentColour;
@@ -109,6 +110,7 @@ ul {
       margin-bottom: 20px;
       #password {
         @include fontOveride();
+        @include border();
         padding: 5px;
         border: none;
         outline: none;
@@ -118,6 +120,7 @@ ul {
       }
       #username {
         @include fontOveride();
+        @include border();
         padding: 5px;
         border: none;
         outline: none;

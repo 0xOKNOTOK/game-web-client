@@ -8,14 +8,17 @@ import {
   Field,
   FieldProps,
 } from 'formik'
-import { LanguageServiceMode } from 'typescript'
+
+interface Props {
+  setUser: Function
+}
 
 interface loginForm {
   username: string
   password: string
 }
 
-export const LoginScreen: React.FC<{}> = (): React.ReactElement => {
+export const LoginScreen: React.FC<Props> = (): React.ReactElement => {
   const initialValues: loginForm = { username: '', password: '' }
   return (
     <Container class='login-screen'>

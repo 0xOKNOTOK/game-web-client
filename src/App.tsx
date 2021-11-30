@@ -41,7 +41,7 @@ const App: React.FC = () => {
       <MainScreen updatePopUpMenu={updatePopUpMenu} />
     </Container>
   ) : (
-    <LoginScreen />
+    <LoginScreen setUser={setUser} />
   )
 }
 

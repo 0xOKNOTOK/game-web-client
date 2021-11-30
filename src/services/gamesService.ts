@@ -34,5 +34,16 @@ const addNonClientGame: Function = async (game: Object) => {
     return request.data
 }
 
-const gameService = {getUsersGames, addNewGameFromGameList, addNonClientGame, setToken}
+const removeGameFromClient: Function = async (game: Object) => {
+    const cfg: Object = {
+        headers: {
+            Authorization: token
+        },
+        data: game
+    }
+    const request = await axios.delete(API_URL_LIBRARY, cfg)
+    return request.data
+}
+
+const gameService = {getUsersGames, addNewGameFromGameList, addNonClientGame, setToken, removeGameFromClient}
 export default gameService

@@ -18,7 +18,9 @@ interface loginForm {
   password: string
 }
 
-export const LoginScreen: React.FC<Props> = (): React.ReactElement => {
+export const LoginScreen: React.FC<Props> = ({
+  setUser,
+}): React.ReactElement => {
   const initialValues: loginForm = { username: '', password: '' }
   return (
     <Container class='login-screen'>
@@ -26,20 +28,24 @@ export const LoginScreen: React.FC<Props> = (): React.ReactElement => {
         initialValues={initialValues}
         onSubmit={(values, actions) => {
           console.log({ values, actions })
-          alert(JSON.stringify(values, null, 2))
           actions.setSubmitting(false)
+          setUser({ values })
         }}
       >
         <Form>
-          <label htmlFor='username'>Username</label>
-          <Field id='username' name='username' placeholder='Username' />
-          <label htmlFor='password'>Password</label>
-          <Field
-            id='password'
-            name='password'
-            placeholder='Password'
-            type='password'
-          />
+          <Container class='login-field'>
+            <label htmlFor='username'>Username</label>
+            <Field id='username' name='username' placeholder='Username' />
+          </Container>
+          <Container class='login-field'>
+            <label htmlFor='password'>Password</label>
+            <Field
+              id='password'
+              name='password'
+              placeholder='Password'
+              type='password'
+            />
+          </Container>
           <button type='submit'>Log in</button>
         </Form>
       </Formik>

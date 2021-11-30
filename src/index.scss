@@ -91,7 +91,7 @@ ul {
 
 
 .login-screen {
-  @include flexRow();
+  @include flexCol();
   justify-content: center;
   align-items: center;
   height: 100vh;

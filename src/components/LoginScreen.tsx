@@ -9,6 +9,8 @@ import {
   FieldProps,
 } from 'formik'
 
+import logo from '../assets/logo.png'
+
 interface Props {
   setUser: Function
 }
@@ -42,6 +44,7 @@ export const LoginScreen: React.FC<Props> = ({
 
   return hasAccount ? (
     <Container class='login-screen'>
+      <img src={logo} alt='Gameyo logo' />
       <Formik
         initialValues={initialValuesLogin}
         onSubmit={(values, actions) => {
@@ -71,6 +74,7 @@ export const LoginScreen: React.FC<Props> = ({
     </Container>
   ) : (
     <Container class='login-screen'>
+      <img src={logo} alt='Gameyo logo' />
       <Formik
         initialValues={initialValuesSignUp}
         onSubmit={(values, actions) => {

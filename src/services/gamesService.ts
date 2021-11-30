@@ -14,7 +14,7 @@ const getUsersGames: Function = async () => {
     return request.data;
 }
 
-const addNewGameFromGameList: Function = async (game: Object) =>{
+const addNewGameFromGameList: Function = async (game: Object) => {
     const cfg: Object = {
         headers: {
             Authorization: token
@@ -23,3 +23,16 @@ const addNewGameFromGameList: Function = async (game: Object) =>{
     const request =  await axios.post(API_URL_LIBRARY, game, cfg)
     return request.data;
 }
+
+const addNonClientGame: Function = async (game: Object) => {
+    const cfg: Object = {
+        headers: {
+            Authorization: token
+        }
+    }
+    const request = await axios.post(API_URL_LIBRARY, game, cfg)
+    return request.data
+}
+
+const gameService = {getUsersGames, addNewGameFromGameList, addNonClientGame, setToken}
+export default gameService

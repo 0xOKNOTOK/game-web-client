@@ -180,6 +180,13 @@ ul {
     align-items: center;
     width: 100%;
 
+    img {
+      width: 15%;
+      max-width: 200px;
+      min-width: 150px;
+
+    }
+
     .userDetails {
       @include flexRow();
       @include padding();

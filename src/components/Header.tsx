@@ -1,5 +1,7 @@
 import React from 'react'
 
+import logo from '../assets/logo.png'
+
 interface User {
   userName: string
   userNotifications: number
@@ -16,7 +18,7 @@ export const Header: React.FC<Props> = ({ user }): React.ReactElement => {
   return (
     <header className='brand'>
       <main className='topbar'>
-        <h3>Gameyo</h3>
+        <img src={logo} alt='Gameyo logo.' />
         <span className='userDetails'>
           <button>{user.userLocation}</button>
           <button>${user.userBalance}</button>

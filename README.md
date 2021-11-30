@@ -1,7 +1,7 @@
 
 # Online Game Client
 
-Recreation of a typical desktop game launcher with elements inspired by Battle.net, Steam and Epic Games. This application has user authentication and dynamic data based on a users library, friends and other news.
+Recreation of a typical desktop game launcher with elements inspired by Battle.net, Steam and Epic Games. This application has user authentication and dynamic data based on a users library, friends and other information respective to the games owned by a user.
 
 
 ## Tech Stack

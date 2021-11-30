@@ -3,19 +3,21 @@ import { AllGames } from './components/AllGames'
 import { Container } from './components/Container'
 import { GameBar } from './components/GameBar'
 import { Header } from './components/Header'
+import { LoginScreen } from './components/LoginScreen'
 import { MainScreen } from './components/MainScreen'
 import { PopupMenu } from './components/PopupMenu'
 
 const App: React.FC = () => {
   const [popUpMenuBool, setPopUpMenuBool] = useState(false)
   const [popUpMenuContent, setPopUpMenuContent] = useState({ title: '' })
+  const [user, setUser] = useState()
 
   const updatePopUpMenu = (content: any) => {
     setPopUpMenuBool(!popUpMenuBool)
     setPopUpMenuContent(content)
   }
 
-  return (
+  return user ? (
     <Container class='container'>
       {popUpMenuBool ? (
         <PopupMenu
@@ -23,6 +25,7 @@ const App: React.FC = () => {
           popUpContent={popUpMenuContent}
         />
       ) : null}
+
       <Header
         user={{
           userName: 'rossgr',
@@ -37,6 +40,8 @@ const App: React.FC = () => {
       </section>
       <MainScreen updatePopUpMenu={updatePopUpMenu} />
     </Container>
+  ) : (
+    <LoginScreen />
   )
 }
 

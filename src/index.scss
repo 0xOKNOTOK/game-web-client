@@ -520,9 +520,16 @@ figure:hover {
           @include flexCol();
           justify-content: center;
           align-items: center;
+
+          
           img {
             max-width: 50%;
           }
+
+          li {
+            @include flexCol();
+          }
+
         }
         .game-play-bottom {
           select {

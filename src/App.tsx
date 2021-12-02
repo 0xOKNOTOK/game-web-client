@@ -26,14 +26,7 @@ const App: React.FC = () => {
         />
       ) : null}
 
-      <Header
-        user={{
-          userName: 'rossgr',
-          userBalance: 20,
-          userNotifications: 2,
-          userLocation: 'UK',
-        }}
-      />
+      <Header user={user} />
       <section className='gamebar-parent'>
         <AllGames />
         <GameBar />

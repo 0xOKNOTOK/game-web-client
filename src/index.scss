@@ -104,6 +104,11 @@ ul {
       @include border();
       background-color: $accentColour;
       @include padding();
+      &:hover {
+        @include hoverStyle();
+        cursor: pointer;
+
+      }
     }
     .login-field {
       @include flexCol();

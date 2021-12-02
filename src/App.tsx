@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AllGames } from './components/AllGames'
+import { AllGames } from './components/AllGamesButton'
 import { Container } from './components/Container'
 import { GameBar } from './components/GameBar'
 import { Header } from './components/Header'

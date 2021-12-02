@@ -1,13 +1,10 @@
 import React from 'react'
+import { Container } from './Container'
 
-import gameLibraryImage from '../assets/games.png'
-
-export const AllGames: React.FC = (): React.ReactElement => {
+export const AllGames: React.FC = () => {
   return (
-    <header className='allgames'>
-      <figure className='all-games-btn'>
-        <img src={gameLibraryImage} alt='games-icon' />
-      </figure>
-    </header>
+    <Container class='all-games'>
+      <h1>games library will go here /todo</h1>
+    </Container>
   )
 }

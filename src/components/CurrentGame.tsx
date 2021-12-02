@@ -41,6 +41,17 @@ export const CurrentGame: React.FC<Props> = ({
       <Container class='current-game'>
         <div className='game-play-top'>
           <img src={wowWotlk} alt='Current game logo.' />
+          <ul>
+            <li>
+              <a href='/l'>Shop</a>
+            </li>
+            <li>
+              <a href='/s'>Forums</a>
+            </li>
+            <li>
+              <a href='/k'>Patch Notes</a>
+            </li>
+          </ul>
         </div>
 
         <div className='game-play-bottom'>

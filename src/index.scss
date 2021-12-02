@@ -11,6 +11,7 @@ $shadowColour: #002E4E;
 $textPrimary: #ffffff;
 $opaqueHighlight: #ffffff27;
 $darkerShadow: #0000003b;
+$textSecondary: #c5c5c5;
 
 // Mixins
 @mixin themePrimary {
@@ -21,8 +22,6 @@ $darkerShadow: #0000003b;
 @mixin themeTransparent {
   background-color: #ffffff27;
 }
-
-
 
 @mixin flexRow {
   display: flex;
@@ -56,11 +55,16 @@ $darkerShadow: #0000003b;
   font-family: 'Outfit', sans-serif;
 }
 
+@mixin textColourPrimary {
+  color:  white;
+}
+
+
 
 // Global Stylings
-body, button {
+body, button, a {
   font-family: 'Outfit', sans-serif;
-  color: white;
+  color: $textSecondary;
   box-sizing: border-box;
   margin: 0;
   font-size: 16px;
@@ -100,6 +104,7 @@ ul {
     justify-content: space-evenly;
     button {
       margin-bottom: 10px;
+      color: $textPrimary;
       border: none;
       @include border();
       background-color: $accentColour;
@@ -129,7 +134,7 @@ ul {
         padding: 5px;
         border: none;
         outline: none;
-        color: white;
+        color: $textPrimary;
         background-color: $shadowOpaque;
 
       }
@@ -318,6 +323,10 @@ figure:hover {
         width: 100%;
         margin-top: 30px;
       }
+      a {
+        list-style-type: none;
+        text-decoration: none;
+      }
     }
 
     .game-play-bottom {
@@ -351,6 +360,7 @@ figure:hover {
     .btn-large {
       padding: 13px 100px;
       background-color: $accentColour;
+      color: $textPrimary;
       font-size: 20px;
       @include border();
       outline: none;

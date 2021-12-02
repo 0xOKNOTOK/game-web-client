@@ -323,9 +323,12 @@ figure:hover {
       }
       li {
        @include flexRow();
-       align-items: center;
+       align-items: flex-end;
+       justify-content: flex-start;
         img {
-          width: 25px;
+          @include flexRow();
+          align-self: center;
+          width: 20px;
           filter: invert(100);
           margin-right: 10px;
         }

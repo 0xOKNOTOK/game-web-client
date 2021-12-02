@@ -8,6 +8,7 @@ interface Props {
 
 interface Content {
   title: string
+  initialValues?: Object
 }
 
 export const PopupMenu: React.FC<Props> = ({

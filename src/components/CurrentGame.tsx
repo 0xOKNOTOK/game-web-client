@@ -4,6 +4,7 @@ import { ButtonLarge } from './ButtonLarge'
 import { Container } from './Container'
 import wowWotlk from '../assets/wow_wotlk_placeholder.png'
 import { Input } from './Input'
+import tempImage from '../assets/settings.svg'
 
 interface Props {
   game: Game
@@ -43,12 +44,15 @@ export const CurrentGame: React.FC<Props> = ({
           <img src={wowWotlk} alt='Current game logo.' />
           <ul>
             <li>
+              <img src={tempImage} alt='shop' />
               <a href='/l'>Shop</a>
             </li>
             <li>
+              <img src={tempImage} alt='shop' />
               <a href='/s'>Forums</a>
             </li>
             <li>
+              <img src={tempImage} alt='shop' />
               <a href='/k'>Patch Notes</a>
             </li>
           </ul>

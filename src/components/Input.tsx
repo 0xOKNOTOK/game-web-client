@@ -1,4 +1,3 @@
-import { version } from 'process'
 import React from 'react'
 
 interface Props {

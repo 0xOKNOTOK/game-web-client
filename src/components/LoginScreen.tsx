@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from './Container'
-import {
-  Formik,
-  FormikHelpers,
-  FormikProps,
-  Form,
-  Field,
-  FieldProps,
-} from 'formik'
+import { Formik, Form, Field } from 'formik'
 
 import logo from '../assets/logo.png'
 

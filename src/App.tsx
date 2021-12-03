@@ -11,6 +11,7 @@ const App: React.FC = () => {
   const [popUpMenuBool, setPopUpMenuBool] = useState(false)
   const [popUpMenuContent, setPopUpMenuContent] = useState({ title: '' })
   const [user, setUser] = useState()
+  const [isLoaded, setIsLoaded] = useState(false)
 
   const updatePopUpMenu = (content: any) => {
     setPopUpMenuBool(!popUpMenuBool)

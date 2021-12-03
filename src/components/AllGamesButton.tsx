@@ -7,6 +7,7 @@ export const AllGames: React.FC = (): React.ReactElement => {
     <header className='allgames'>
       <figure className='all-games-btn'>
         <img src={gameLibraryImage} alt='games-icon' />
+        <p>ALL GAMES</p>
       </figure>
     </header>
   )

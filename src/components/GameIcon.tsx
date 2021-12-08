@@ -6,7 +6,7 @@ interface Props {
   class: string
 }
 
-export const GameIcon: React.FC<Props> = props => {
+export const GameIcon = (props: Props) => {
   return (
     <figure>
       <img className={props.class} src={props.image} alt={props.name} />

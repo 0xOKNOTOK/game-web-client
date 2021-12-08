@@ -11,10 +11,12 @@ interface Content {
   initialValues?: Object
 }
 
-export const PopupMenu: React.FC<Props> = ({
-  updatePopUpMenu,
-  popUpContent,
-}): React.ReactElement => {
+export const PopupMenu = (
+  {
+    updatePopUpMenu,
+    popUpContent
+  }: Props
+): React.ReactElement => {
   const handleCloseButton = (e: React.MouseEvent) => {
     e.preventDefault()
     updatePopUpMenu()

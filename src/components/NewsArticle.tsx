@@ -3,7 +3,7 @@ import { Container } from './Container'
 import newsTemplate from '../assets/news.jpg'
 import { ButtonLarge } from './ButtonLarge'
 
-export const NewsArticle: React.FC = (): React.ReactElement => {
+export const NewsArticle = (): React.ReactElement => {
   const handleArticleClick = (e: React.MouseEvent) => {
     e.preventDefault()
   }

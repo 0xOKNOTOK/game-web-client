@@ -3,7 +3,7 @@ import { Company } from './Company'
 import { Container } from './Container'
 import { StoreGame } from './StoreGame'
 
-export const AllGames: React.FC = () => {
+export const AllGames = () => {
   return (
     <Container class='all-games'>
       <h1>All Games</h1>

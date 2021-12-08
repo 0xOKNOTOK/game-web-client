@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from './Container'
 
-export const Dropdown: React.FC = (): React.ReactElement => {
+export const Dropdown = (): React.ReactElement => {
   return (
     <Container class='dropdown'>
       <section>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from './Container'
 import { FriendCard } from './FriendCard'
 
-export const FriendsList: React.FC = (): React.ReactElement => {
+export const FriendsList = (): React.ReactElement => {
   return (
     <Container class='friends-list'>
       <h2>Friends</h2>

@@ -5,7 +5,12 @@ interface Props {
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const ButtonLarge: React.FC<Props> = ({ buttonLabel, onClick }) => {
+export const ButtonLarge = (
+  {
+    buttonLabel,
+    onClick
+  }: Props
+) => {
   return (
     <button className='btn-large' onClick={onClick}>
       {buttonLabel}

@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const StoreGame: React.FC = () => {
+export const StoreGame = () => {
   return <div className='store-game'></div>
 }

@@ -8,9 +8,11 @@ interface Props {
   updatePopUpMenu: Function
 }
 
-export const MainScreen: React.FC<Props> = ({
-  updatePopUpMenu,
-}): React.ReactElement => {
+export const MainScreen = (
+  {
+    updatePopUpMenu
+  }: Props
+): React.ReactElement => {
   return (
     <Container class='main'>
       <CurrentGame

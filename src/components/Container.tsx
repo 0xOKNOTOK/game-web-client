@@ -5,6 +5,6 @@ interface Props {
   class: string
 }
 
-export const Container: React.FC<Props> = (props): ReactElement => {
+export const Container = (props: Props): ReactElement => {
   return <section className={props.class}>{props.children}</section>
 }

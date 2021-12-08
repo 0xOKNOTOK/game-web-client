@@ -2,7 +2,7 @@ import React from 'react'
 
 import gameLibraryImage from '../assets/games.png'
 
-export const AllGames: React.FC = (): React.ReactElement => {
+export const AllGames = (): React.ReactElement => {
   return (
     <header className='allgames'>
       <figure className='all-games-btn'>

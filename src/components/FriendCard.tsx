@@ -13,7 +13,11 @@ interface Friend {
   status: string
 }
 
-export const FriendCard: React.FC<Props> = ({ friend }) => {
+export const FriendCard = (
+  {
+    friend
+  }: Props
+) => {
   return (
     <Container class='friend-card'>
       <img src={tempProfilePic} alt='Profile' />

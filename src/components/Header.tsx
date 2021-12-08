@@ -14,7 +14,11 @@ interface Props {
   user: User
 }
 
-export const Header: React.FC<Props> = ({ user }): React.ReactElement => {
+export const Header = (
+  {
+    user
+  }: Props
+): React.ReactElement => {
   return (
     <header className='brand'>
       <main className='topbar'>

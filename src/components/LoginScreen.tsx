@@ -19,9 +19,11 @@ interface signUpForm {
   password: string
 }
 
-export const LoginScreen: React.FC<Props> = ({
-  setUser,
-}): React.ReactElement => {
+export const LoginScreen = (
+  {
+    setUser
+  }: Props
+): React.ReactElement => {
   const [hasAccount, setHasAccount] = useState(true)
 
   const handleFormSwitch = (e: React.MouseEvent) => {

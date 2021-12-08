@@ -17,10 +17,12 @@ interface Game {
   logo: string
 }
 
-export const CurrentGame: React.FC<Props> = ({
-  game,
-  updatePopUpMenu,
-}): React.ReactElement => {
+export const CurrentGame = (
+  {
+    game,
+    updatePopUpMenu
+  }: Props
+): React.ReactElement => {
   const handleSettingsButtonClick = (e: React.MouseEvent) => {
     const content = {
       title: 'Chicken',

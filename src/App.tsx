@@ -8,7 +8,7 @@ import { MainScreen } from './components/MainScreen'
 import { PopupMenu } from './components/PopupMenu'
 
 
-const App: React.FC = () => {
+const App = () => {
   const [popUpMenuBool, setPopUpMenuBool] = useState(false)
   const [popUpMenuContent, setPopUpMenuContent] = useState({ title: '' })
   const [user, setUser] = useState()

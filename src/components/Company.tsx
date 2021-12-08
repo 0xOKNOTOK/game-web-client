@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Company: React.FC = () => {
+export const Company = () => {
   return <div className='company'></div>
 }

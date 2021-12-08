@@ -11,7 +11,7 @@ interface Versions {
   additional?: string
 }
 
-export const Input: React.FC<Props> = props => {
+export const Input = (props: Props) => {
   return (
     <select className={props.class}>
       <option value={props.versions.basegame}>

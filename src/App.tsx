@@ -7,6 +7,7 @@ import { LoginScreen } from './components/LoginScreen'
 import { MainScreen } from './components/MainScreen'
 import { PopupMenu } from './components/PopupMenu'
 
+
 const App: React.FC = () => {
   const [popUpMenuBool, setPopUpMenuBool] = useState(false)
   const [popUpMenuContent, setPopUpMenuContent] = useState({ title: '' })
@@ -17,6 +18,8 @@ const App: React.FC = () => {
     setPopUpMenuBool(!popUpMenuBool)
     setPopUpMenuContent(content)
   }
+
+
 
   return user ? (
     <Container class='container'>

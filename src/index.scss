@@ -422,6 +422,7 @@ figure:hover {
       background-color: $darkerShadow;
       @include flexRow();
       img {
+        object-fit: cover;
         width: 30%;
       }
       figcaption {
